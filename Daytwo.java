@@ -171,7 +171,7 @@ public class Daytwo {
 
 
 
-int a = 200;
+// int a = 200;
 // int b = 500;
 // int c = 300;
 
@@ -269,6 +269,293 @@ int a = 200;
 // Check if a number is even and divisible by 3.
 // ➤ Hint: Use num % 2 == 0 && num % 3 == 0
 
+// ----------------------------  swithc --------------------
+
+// day 1 monday   day 2  tue    day 3 wedn
+
+// int day = 5;
+
+//  switch(day){
+//      case 1:
+//      System.out.println("mon");
+//      break;
+
+//     case 2:
+//     System.out.println("tue");
+//     break;
+
+//     case 3  :
+//     System.out.println("wed");
+//     break;
+
+
+    
+//     case 4 :
+//     System.out.println("thur");
+//     break;
+
+
+//     default:
+//     System.out.println("please enter valid day");
+
+
+
+//  }
+
+
+
+
+
+   // int day = 3;
+
+   //      // Example 1: Day of week
+   //      switch (day) {
+   //          case 1:
+   //           System.out.println("\nSwitch Example 1: Sunday"); break;
+
+   //          case 2: 
+   //          System.out.println("Switch Example 1: Monday"); break;
+   //          case 3: System.out.println("Switch Example 1: Tuesday"); break;
+   //          default: System.out.println("Switch Example 1: Invalid Day");
+   //      }
+
+
+   //   // Example 2: Month name
+   //      int month = 12;
+   //      switch (month) {
+   //          case 1: 
+   //          System.out.println("Switch Example 2: January"); break;
+
+   //          case 12: 
+   //          System.out.println("Switch Example 2: December"); break;
+
+   //          default:
+   //           System.out.println("Switch Example 2: Unknown Month");
+   //      }
+
+
+
+
+     // Example 3: Grade
+      //   char grade = 'A';
+      //   switch (grade) {
+      //       case 'A':
+      //        System.out.println("Switch Example 3: Excellent"); break;
+
+      //       case 'B':
+      //        System.out.println("Switch Example 3: Good"); 
+      //        break;
+
+      //       default:
+      //        System.out.println("Switch Example 3: Needs Improvement");
+      //   }
+
+
+  // Example 4: Simple calculator
+      //   int x1 = 10, y1 = 5;
+      //   char op = '*';
+
+      //   switch (op) {
+      //       case '+': 
+      //       System.out.println("Sum = " + (x1 + y1)); 
+      //       break;
+
+      //       case '-':
+      //        System.out.println("Diff = " + (x1 - y1));
+      //         break;
+
+      //       case '*':
+      //        System.out.println("Product = " + (x1 * y1));
+      //         break;
+
+      //       case '/': 
+      //       System.out.println("Divide = " + (x1 / y1));
+      //        break;
+
+      //       default: System.out.println("Invalid Operator");
+      //   }
+
+
+
+      //  String color = "red";
+      //   switch (color) {
+      //       case "red": 
+      //       System.out.println("Stop");
+      //        break;
+      //       case "yellow": 
+      //       System.out.println("Wait");
+      //        break;
+      //       case "green":
+      //        System.out.println("Go");
+      //         break;
+      //       default: System.out.println("Invalid color");
+      //   }
+
+
+
+      //  int evn = 4;
+      //   switch (evn % 2) {
+      //       case 0: 
+      //       System.out.println("Even Number");
+      //        break;
+      //       case 1:
+      //        System.out.println("Odd Number");
+      //         break;
+      //   }
+
+
+      //---------------------LOOPS-----------------------
+
+// 10 time print 
+
+   // int i = 10;  
+   //    while ( i <=1) {  //  10 < = 1 
+      
+   //       System.out.println( i + "hello");  // 10 
+   //       i--;   // 9
+   //    }
+
+// 1 - 10 
+
+// int i = 1;
+//    do{
+
+//     System.out.println(i); // 1
+//    i++;  // 2 
+
+//    } while(i <= 10);  // 2 <= 10  true 
+
+
+
+
+//   for loop 
+
+// // 
+
+//   for(int i=1;   i<=10;   i++){
+//        System.out.println(i);
+
+//   }
+
+
+// print even 
+// 1 = 20
+//   for(int num = 1;   num<=20;  num++){
+//       if(num % 2 != 0){
+//          System.out.println(num);
+//       }
+
+//   }
+
+
+
+
+// sum of 10 numbers 
+
+//   int num = 5;
+//   int sum = 1;
+
+//         for (int i = 1; i <= num; i++) {
+//             sum *= i;
+         
+           
+//         }
+
+//          System.out.println("3. Sum of first " + num + " numbers: " + sum);
+
+      // tableof = 5 
+      // 5 * 1 = 5 
+      // 5 * 2 = 10 
+      // 5 * ...  50 
+
+   // int tableof = 8;
+   //    for(int i = 1;   i<=10; i++){
+   //       System.out.println(tableof + "*" + i +  "=" + tableof*i );
+
+
+   //    }
+
+
+
+
+    // 6. Print reverse of a number
+        int revNum = 1234, rev = 0;
+
+        while (revNum != 0) {  // 1234 != 0
+            rev = rev * 10 + revNum % 10;  // 0 * 10 + 123.4 % 10
+            revNum /= 10;  // 1234 /= 10; 123.
+            // rev = 4 
+        }
+        System.out.println("6. Reversed number: " + rev);
+
+
+//         //  🔹 Initial State:
+// revNum = 1234
+
+// rev = 0
+
+// 🔁 1st Iteration:
+// revNum != 0 → 1234 != 0 → ✅ true
+
+// Extract last digit: revNum % 10 = 1234 % 10 = 4
+
+// Update rev: rev = rev * 10 + 4 = 0 * 10 + 4 = 4
+
+// Remove last digit: revNum = revNum / 10 = 1234 / 10 = 123
+
+// After 1st iteration:
+
+// rev = 4
+
+// revNum = 123
+
+// 🔁 2nd Iteration:
+// revNum != 0 → 123 != 0 → ✅
+
+// revNum % 10 = 123 % 10 = 3
+
+// rev = rev * 10 + 3 = 4 * 10 + 3 = 43
+
+// revNum = 123 / 10 = 12
+
+// After 2nd iteration:
+
+// rev = 43
+
+// revNum = 12
+
+// 🔁 3rd Iteration:
+// revNum != 0 → 12 != 0 → ✅
+
+// revNum % 10 = 12 % 10 = 2
+
+// rev = rev * 10 + 2 = 43 * 10 + 2 = 432
+
+// revNum = 12 / 10 = 1
+
+// After 3rd iteration:
+
+// rev = 432
+
+// revNum = 1
+
+// 🔁 4th Iteration:
+// revNum != 0 → 1 != 0 → ✅
+
+// revNum % 10 = 1 % 10 = 1
+
+// rev = rev * 10 + 1 = 432 * 10 + 1 = 4321
+
+// revNum = 1 / 10 = 0
+
+// After 4th iteration:
+
+// rev = 4321
+
+// revNum = 0
+
+// 🔚 Loop Ends:
+// revNum == 0 → loop exits
 
 
 

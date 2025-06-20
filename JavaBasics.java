@@ -221,6 +221,7 @@ public class JavaBasics {
                 System.out.println("Consonant");
         }
 
+
         // ------------------ LOOPS (Brief Examples) ------------------
         System.out.println("\nFOR LOOP Example:");
         for (int i = 1; i <= 5; i++) {
@@ -798,6 +799,123 @@ public class SwitchAssignments {
         }
 
         sc.close();
+
+
+
+
+
+   // Java Assignment Practice: Loops (for, while, do-while)
+public class LoopAssignments {
+    public static void main(String[] args) {
+
+        // 1. Print numbers from 1 to 100
+        System.out.println("1. Numbers from 1 to 100:");
+        for (int i = 1; i <= 100; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println("\n------------------------------------------------");
+
+        // 2. Print all even numbers from 1 to N
+        int N = 20;
+        System.out.println("2. Even numbers from 1 to " + N + ":");
+        for (int i = 1; i <= N; i++) {
+            if (i % 2 == 0) System.out.print(i + " ");
+        }
+        System.out.println("\n------------------------------------------------");
+
+        // 3. Print sum of first N natural numbers
+        int num = 10, sum = 0;
+        for (int i = 1; i <= num; i++) {
+            sum += i;
+        }
+        System.out.println("3. Sum of first " + num + " numbers: " + sum);
+        // Explanation: Sum updated in each loop iteration
+
+        System.out.println("------------------------------------------------");
+
+        // 4. Print table of a number
+        int tableOf = 7;
+        System.out.println("4. Table of " + tableOf);
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(tableOf + " x " + i + " = " + (tableOf * i));
+        }
+
+        System.out.println("------------------------------------------------");
+
+        // 5. Find factorial of a number
+        int factNum = 5, fact = 1;
+        for (int i = 1; i <= factNum; i++) {
+            fact *= i;
+        }
+        System.out.println("5. Factorial of " + factNum + " = " + fact);
+        // Explanation: fact *= i repeatedly multiplies values
+
+        System.out.println("------------------------------------------------");
+
+        // 6. Print reverse of a number
+        int revNum = 1234, rev = 0;
+        while (revNum != 0) {
+            rev = rev * 10 + revNum % 10;
+            revNum /= 10;
+        }
+        System.out.println("6. Reversed number: " + rev);
+        // Explanation: Extract last digit and shift
+
+        System.out.println("------------------------------------------------");
+
+        // 7. Check if number is palindrome
+        int original = 121, reverse = 0, temp = original;
+        while (temp != 0) {
+            reverse = reverse * 10 + temp % 10;
+            temp /= 10;
+        }
+        if (original == reverse) {
+            System.out.println("7. Palindrome");
+        } else {
+            System.out.println("7. Not Palindrome");
+        }
+
+        System.out.println("------------------------------------------------");
+
+        // 8. Count digits in a number
+        int digitNum = 56789, count = 0;
+        int tempNum = digitNum;
+        while (tempNum != 0) {
+            count++;
+            tempNum /= 10;
+        }
+        System.out.println("8. Number of digits in " + digitNum + ": " + count);
+
+        System.out.println("------------------------------------------------");
+
+        // 9. Print Fibonacci series till N terms
+        int terms = 10, a = 0, b = 1;
+        System.out.println("9. Fibonacci Series (first " + terms + " terms):");
+        for (int i = 1; i <= terms; i++) {
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+
+        System.out.println("\n------------------------------------------------");
+
+        // 10. Sum of digits of a number
+        int digitSumNum = 12345, digitSum = 0;
+        int tempVal = digitSumNum;
+        do {
+            digitSum += tempVal % 10;
+            tempVal /= 10;
+        } while (tempVal != 0);
+        System.out.println("10. Sum of digits of " + digitSumNum + " = " + digitSum);
+    }
+}
+
+
+
+
+
+
     }
 }
 
