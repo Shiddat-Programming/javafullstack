@@ -478,15 +478,15 @@ public class Daytwo {
 
 
 
-    // 6. Print reverse of a number
-        int revNum = 1234, rev = 0;
+   //  // 6. Print reverse of a number
+   //      int revNum = 1234, rev = 0;
 
-        while (revNum != 0) {  // 1234 != 0
-            rev = rev * 10 + revNum % 10;  // 0 * 10 + 123.4 % 10
-            revNum /= 10;  // 1234 /= 10; 123.
-            // rev = 4 
-        }
-        System.out.println("6. Reversed number: " + rev);
+   //      while (revNum != 0) {  // 1234 != 0
+   //          rev = rev * 10 + revNum % 10;  // 0 * 10 + 123.4 % 10
+   //          revNum /= 10;  // 1234 /= 10; 123.
+   //          // rev = 4 
+   //      }
+   //      System.out.println("6. Reversed number: " + rev);
 
 
 //         //  🔹 Initial State:
@@ -557,6 +557,84 @@ public class Daytwo {
 // 🔚 Loop Ends:
 // revNum == 0 → loop exits
 
+
+
+
+// // loops for 
+//  // 7. Check if number is palindrome
+//         int original = 121, reverse = 0, temp = original;
+
+//         while (temp != 0) {  // 121
+//             reverse = reverse * 10 + temp % 10; //12.1  >>>1
+//             temp /= 10;   // 12 / 10 >> 1 
+//         }
+
+
+//         if (original == reverse) {
+//             System.out.println("7. Palindrome");
+//         } else {
+//             System.out.println("7. Not Palindrome");
+//         }
+
+
+
+//   int digitSumNum = 12345, digitSum = 0;
+
+//         int tempVal = digitSumNum;
+//         do {
+//             digitSum += tempVal % 10;  // 5  + 4  >> 9 
+//             tempVal /= 10;  // 12345 / 10 0
+//         } while (tempVal != 0);
+
+
+//         System.out.println("10. Sum of digits of " + digitSumNum + " = " + digitSum);
+      
+
+
+
+
+      //   // 8. Count digits in a number
+      //   int digitNum = 56789, count = 0;  // 5
+
+      //   int tempNum = digitNum;
+
+      //   while (tempNum != 0) {
+      //       count++;
+      //       tempNum /= 10; // 0.555
+      //   }
+
+
+      //   System.out.println("8. Number of digits in " + digitNum + ": " + count);
+
+      //   System.out.println("------------------------------------------------");
+
+// int terms = 10, a = 0, b = 1;
+
+//         System.out.println("9. Fibonacci Series (first " + terms + " terms):");
+//         for (int i = 1; i <= terms; i++) {
+//             System.out.print(a + " ");
+//             int next = a + b;  // 1  1 2  3 
+//             a = b; //   
+//             b = next;
+//         }
+
+
+        // 7. Check if a number is a prime number
+        int primeCheck = 25;
+        boolean isPrime = true;
+
+        if (primeCheck <= 1) isPrime = false;
+      //   else {                    25 / 2 >>> 12
+            for (int i = 2; i <= primeCheck / 2; i++) {   
+                     // 12 % 2  >> 0 == 0
+                if (primeCheck % i == 0) { 
+                    isPrime = false;  
+                    break; 
+                }
+            }
+        }
+        System.out.println("7. " + primeCheck + (isPrime ? " is Prime" : " is NOT Prime"));
+        // Explanation: If no number divides the given number, it is prime
 
 
 

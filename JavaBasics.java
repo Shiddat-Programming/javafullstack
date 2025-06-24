@@ -916,6 +916,303 @@ public class LoopAssignments {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Java Arrays - Complete Notes with Examples and Assignments
+ * Author: Shiddat Programming Institute
+ * Description: This Java file contains deep detailed notes, examples,
+ * and interview-level assignments with step-by-step explanations.
+ */
+
+public class JavaArraysCompleteNotes {
+
+    public static void main(String[] args) {
+
+        /*
+         * ---------------------------
+         * 1. Introduction to Arrays:
+         * ---------------------------
+         * An array in Java is a container object that holds a fixed number of values of a single type.
+         * It is a data structure used to store multiple values in a single variable.
+         *
+         * Syntax:
+         * dataType[] arrayName = new dataType[size];
+         */
+
+        int[] numbers = new int[5]; // Declare an integer array of size 5
+
+        // Initializing values
+        numbers[0] = 10;
+        numbers[1] = 20;
+        numbers[2] = 30;
+        numbers[3] = 40;
+        numbers[4] = 50;
+
+        // Accessing values
+        System.out.println("Element at index 2: " + numbers[2]);
+
+        /*
+         * --------------------------------------
+         * 2. Array Declaration and Initialization
+         * --------------------------------------
+         */
+
+        int[] marks = { 90, 85, 70, 95, 88 }; // Declaration with initialization
+        String[] names = new String[] { "Shahid", "Aman", "Rahul" }; // Another way
+
+        /*
+         * ----------------------------
+         * 3. Types of Arrays in Java:
+         * ----------------------------
+         * - One-Dimensional Array
+         * - Multi-Dimensional Array (2D, 3D, etc.)
+         */
+
+        // 1D Example:
+        int[] age = { 18, 20, 22 };
+
+        // 2D Array Example:
+        int[][] matrix = {
+            {1, 2},
+            {3, 4},
+            {5, 6}
+        };
+        System.out.println("2D Element [1][1]: " + matrix[1][1]);
+
+
+          
+
+
+
+
+        /*
+         * -----------------------
+         * 4. Array Iteration:
+         * -----------------------
+         */
+
+        for (int i = 0; i < marks.length; i++) {
+            System.out.println("Marks[" + i + "]: " + marks[i]);
+        }
+
+        // Enhanced For Loop
+        for (String name : names) {
+            System.out.println("Name: " + name);
+        }
+
+        /*
+         * ---------------------------
+         * 5. Common Array Methods:
+         * ---------------------------
+         * Arrays is a utility class in java.util package for array operations
+         */
+
+        java.util.Arrays.sort(marks); // Sorting array
+        java.util.Arrays.fill(numbers, 100); // Fill all elements with 100
+        int index = java.util.Arrays.binarySearch(marks, 85); // Binary search (must be sorted)
+
+        System.out.println("Sorted Marks:");
+        for (int mark : marks) System.out.print(mark + " ");
+        System.out.println("\nIndex of 85 in sorted array: " + index);
+
+        /*
+         * -----------------------------------
+         * 6. Multi-Dimensional Array Example
+         * -----------------------------------
+         */
+        int[][] table = new int[3][3]; // 3x3 matrix
+        int value = 1;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                table[i][j] = value++;
+            }
+        }
+
+        // Printing 2D Array
+        System.out.println("3x3 Matrix:");
+        for (int[] row : table) {
+            for (int col : row) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+
+        /*
+         * ----------------------
+         * 7. Array Cloning:
+         * ----------------------
+         */
+        int[] original = {1, 2, 3};
+        int[] clone = original.clone();
+        clone[0] = 99;
+        System.out.println("Original[0]: " + original[0]); // Remains 1
+        System.out.println("Clone[0]: " + clone[0]);       // Changed to 99
+
+        /*
+         * ---------------------------
+         * 8. Jagged Arrays:
+         * ---------------------------
+         * A 2D array with different column sizes
+         */
+        int[][] jagged = new int[3][];
+        jagged[0] = new int[2];
+        jagged[1] = new int[3];
+        jagged[2] = new int[1];
+
+        /*
+         * ---------------------------
+         * 9. Limitations of Arrays:
+         * ---------------------------
+         * - Fixed Size
+         * - No built-in methods to add/remove elements (use ArrayList instead)
+         * - No automatic resizing
+         */
+
+        /*
+         * -----------------------------------
+         * 10. Arrays Utility Class Methods:
+         * -----------------------------------
+         * - sort()
+         * - fill()
+         * - equals()
+         * - copyOf()
+         * - toString()
+         */
+
+        int[] a = {5, 2, 1};
+        java.util.Arrays.sort(a);
+        System.out.println("Sorted: " + java.util.Arrays.toString(a));
+
+        int[] b = java.util.Arrays.copyOf(a, 5);
+        System.out.println("Copied Array: " + java.util.Arrays.toString(b));
+
+        boolean eq = java.util.Arrays.equals(a, b);
+        System.out.println("Are a and b equal? " + eq);
+
+        /*
+         * -------------------------------
+         * 11. Final Tips:
+         * -------------------------------
+         * - Always check array bounds
+         * - Use enhanced for-loops when no index is needed
+         * - Prefer ArrayList for dynamic data
+         */
+
+        // ----------------------------
+        // Array Assignments + Answers
+        // ----------------------------
+
+        System.out.println("\n\n------ Array Assignments with Explanation ------");
+
+        // Q1: Find maximum element in array
+        int[] arr1 = {10, 25, 5, 90, 45};
+        int max = arr1[0];
+        for (int i = 1; i < arr1.length; i++) {
+            if (arr1[i] > max) max = arr1[i];
+        }
+        System.out.println("Q1. Max Element: " + max); // 90
+
+        // Q2: Reverse an array
+        int[] arr2 = {1, 2, 3, 4, 5};
+        for (int i = 0; i < arr2.length / 2; i++) {
+            int temp = arr2[i];
+            arr2[i] = arr2[arr2.length - 1 - i];
+            arr2[arr2.length - 1 - i] = temp;
+        }
+        System.out.print("Q2. Reversed: ");
+        for (int i : arr2) System.out.print(i + " ");
+        System.out.println();
+
+        // Q3: Sum of array
+        int[] arr3 = {5, 5, 5};
+        int sum = 0;
+        for (int val : arr3) 
+        sum += val;
+        System.out.println("Q3. Sum: " + sum);
+
+        // Q4: Check if array is sorted
+        boolean sorted = true;
+        int[] arr4 = {10, 20, 30, 40};
+        for (int i = 0; i < arr4.length - 1; i++) {
+            if (arr4[i] > arr4[i + 1]) {
+                sorted = false;
+                break;
+            }
+        }
+        System.out.println("Q4. Is Sorted? " + sorted);
+
+        // Q5: Find duplicate elements
+        int[] arr5 = {1, 2, 3, 2, 4, 5, 1};
+        System.out.print("Q5. Duplicates: ");
+        for (int i = 0; i < arr5.length; i++) {
+            for (int j = i + 1; j < arr5.length; j++) {
+                if (arr5[i] == arr5[j]) {
+                    System.out.print(arr5[i] + " ");
+                    break;
+                }
+            }
+        }
+
+        // More 5 Assignments (Q6 to Q10) with explanations can be added on next update.
+    }
+} // End of Class
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
 
