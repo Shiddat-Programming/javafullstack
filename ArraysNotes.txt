@@ -1,0 +1,36 @@
+✅ Arrays in Java :
+Arrays in Java are one of the most fundamental data structures that allow us to store multiple values of the same type in a single variable.
+
+They are useful for storing and managing collections of data. 
+
+  Arrays in Java are objects, which makes them work differently from arrays in C/C++ in terms of memory management :
+
+  In Java, all arrays are dynamically allocated.
+Arrays may be stored in contiguous memory [consecutive memory locations].
+
+✅ Creating, Initializing, and Accessing an Arrays in Java
+
+🟡 1. Declaring an Array :
+            Method 1:
+        type var-name[]; 
+
+        Method 2:
+        type[] var-name;
+
+
+// declaring array 
+    int intArray[];
+
+// allocating memory to array 
+intArray = new int[20];   
+
+// combining both statements in one 
+int[] intArray = new int[20]; 
+
+🟡 Default Array Values in Java :
+S.No.	Datatype	        Default Value
+1	    boolean	            false
+2	    int	                0
+3	    double	            0.0
+4	    String	            null
+5	    User-Defined Type	null
